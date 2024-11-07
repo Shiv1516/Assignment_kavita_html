@@ -319,6 +319,9 @@ table {
 .bg3 {
   background-color: #fff;
 }
+.bg4 {
+  background-color: #12a05c;
+}
 .fc1 {
   color: #000000;
 }
@@ -341,6 +344,9 @@ table {
 }
 .fc7 {
   color: #c0590e;
+}
+.fc8 {
+  color: #191919;
 }
 
 .fc-frd {
@@ -368,6 +374,9 @@ textarea {
   resize: none;
 }
 /* font style */
+.fs10 {
+  font-size: 10px;
+}
 .fs12 {
   font-size: 12px;
 }
@@ -906,6 +915,9 @@ textarea {
   padding-bottom: 64px;
 }
 
+.bord-active{
+  border-bottom:  1.34px solid #FA5C98;
+}
 /* border Style */
 .brd1 {
   border: 2px solid #fb9e8247;
@@ -924,6 +936,9 @@ textarea {
 }
 .brd6 {
   border-top: 1px solid #cec7c754;
+}
+.brd7 {
+  border-bottom: 0.67px solid #f0f0f0;
 }
 .bs1 {
   box-shadow: 0px 4px 13px 0px #bebebe33;
@@ -1085,4 +1100,8 @@ textarea {
 }
 .nav-sub-inn-items {
   left: 178px;
+}
+.product-item-image img {
+  height: 550px;
+  width: 380px;
 }
