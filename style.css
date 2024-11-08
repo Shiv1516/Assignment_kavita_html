@@ -253,7 +253,7 @@ table {
 }
 .flx40 {
   flex: 0 0 40%;
-  max-width: 500px;
+  max-width: 40%;
 }
 .flx50 {
   flex: 0 0 50%;
@@ -915,8 +915,8 @@ textarea {
   padding-bottom: 64px;
 }
 
-.bord-active{
-  border-bottom:  1.34px solid #FA5C98;
+.bord-active {
+  border-bottom: 1.34px solid #fa5c98;
 }
 /* border Style */
 .brd1 {
@@ -1104,4 +1104,106 @@ textarea {
 .product-item-image img {
   height: 550px;
   width: 380px;
+}
+.menu-btn {
+  display: none;
+}
+.menu-btn,
+.logo {
+  z-index: 100;
+}
+.menu-data {
+  transition: all 0.5s;
+  overflow: hidden;
+  right: 0;
+}
+.menu-data.menu-data-close {
+  transform: scale(0.1);
+  position: absolute;
+  background-color: #d9206c;
+  height: 10vh;
+  width: 10vh;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 50%;
+}
+.menu-data:not(.menu-data-close) {
+  transform: scale(1);
+  position: fixed;
+  height: 100vh;
+  z-index: 99;
+  visibility: visible;
+  opacity: 1;
+  border-radius: 0;
+}
+.menu-line {
+  width: 24px;
+  height: 3px;
+  background-color: #bc222e;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+.menu-line:not(:last-of-type) {
+  margin-bottom: 4px;
+}
+.nav-close .menu-btn {
+  background-color: #100e0e;
+  border-radius: 4px;
+}
+.nav-close .menu-line {
+  background-color: #100e0e;
+}
+.nav-close .menu-line:first-of-type {
+  transform: translate(1px, 3px) rotate(45deg);
+}
+.nav-close .menu-line:last-of-type {
+  transform: translate(0px, -4px) rotate(-45deg);
+}
+.nav-close .menu-line:nth-of-type(2) {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 175px;
+    right: 0;
+    left: 0;
+    background-color: #fa5c98;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: calc(100vh - 80px);
+    z-index: 99;
+  }
+  .on-nav,
+  .nav-list {
+    display: block;
+  }
+  .nav-btn {
+    padding: 16px 0 16px 24px;
+    height: auto;
+  }
+  .menu-btn,
+  .nav-sub-items,
+  .nav-sub-inn-items {
+    display: flex;
+  }
+  .nav-items,
+  .nav-item {
+    display: block;
+  }
+  .nav-link {
+    padding: 16px;
+  }
+  .nav-sub-items,
+  .nav-sub-inn-items {
+    position: relative;
+    flex-direction: column;
+  }
+  .nav-sub-inn-items {
+    left: 0;
+  }
 }
